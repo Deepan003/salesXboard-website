@@ -3,3 +3,4 @@ flask-mail
 pandas
 plotly
 xhtml2pdf
+gunicorn
