@@ -1,6 +1,6 @@
-flask
+Flask
 flask-mail
 pandas
-plotly
+matplotlib
 xhtml2pdf
 gunicorn
