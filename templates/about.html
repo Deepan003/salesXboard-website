@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About Us | SalesXboard</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+    * {
+      margin: 0; padding: 0;
+      box-sizing: border-box;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+      color: white;
+      background: transparent;
+      overflow: hidden;
+    }
+
+    video.bg-video {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      backdrop-filter: blur(8px);
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      font-size: 2.2rem;
+      text-shadow: 0 0 10px #0ff;
+    }
+
+    .card-row {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .card {
+      width: 230px;
+      height: 270px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px solid #0ff;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 20px #0ff88f;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeUp 1.5s ease forwards;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 35px #00f7ff;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      border-radius: 10px;
+      object-fit: cover;
+      margin-bottom: 12px;
+      border: 2px solid #0ff;
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      margin: 0;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .back-btn {
+      margin-top: 40px;
+      background: #00f7ff;
+      color: black;
+      padding: 12px 25px;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 0 15px #00f7ff;
+    }
+
+    .back-btn:hover {
+      background: #0ff;
+      box-shadow: 0 0 25px #00f7ff;
+    }
+  </style>
+</head>
+<body>
+
+  <video class="bg-video" autoplay loop muted>
+    <source src="static/videos/about_background.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="container">
+    <h1>Meet the Creators of SalesXboard</h1>
+
+    <div class="card-row">
+      <div class="card">
+        <img src="static/images/deepan.jpeg" alt="Deepan Pramanick">
+        <h3>Deepan Pramanick</h3>
+      </div>
+
+      <div class="card">
+        <img src="static/images/asmit.jpeg" alt="Asmit Kundu">
+        <h3>Asmit Kundu</h3>
+      </div>
+
+      <div class="card">
+        <img src="static/images/khushi.jpeg" alt="Khushi Soni">
+        <h3>Khushi Soni</h3>
+      </div>
+    </div>
+
+    <button class="back-btn" onclick="window.location.href='/'">🔙 Back to Home</button>
+  </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About Us | SalesXboard</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+    * {
+      margin: 0; padding: 0;
+      box-sizing: border-box;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+      color: white;
+      background: transparent;
+      overflow: hidden;
+    }
+
+    video.bg-video {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      backdrop-filter: blur(8px);
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      font-size: 2.2rem;
+      text-shadow: 0 0 10px #0ff;
+    }
+
+    .card-row {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .card {
+      width: 230px;
+      height: 270px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px solid #0ff;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 20px #0ff88f;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeUp 1.5s ease forwards;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 35px #00f7ff;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      border-radius: 10px;
+      object-fit: cover;
+      margin-bottom: 12px;
+      border: 2px solid #0ff;
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      margin: 0;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .back-btn {
+      margin-top: 40px;
+      background: #00f7ff;
+      color: black;
+      padding: 12px 25px;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 0 15px #00f7ff;
+    }
+
+    .back-btn:hover {
+      background: #0ff;
+      box-shadow: 0 0 25px #00f7ff;
+    }
+  </style>
+</head>
+<body>
+
+  <video class="bg-video" autoplay loop muted>
+    <source src="static/videos/about_background.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="container">
+    <h1>Meet the Creators of SalesXboard</h1>
+
+    <div class="card-row">
+      <div class="card">
+        <img src="static/images/deepan.jpeg" alt="Deepan Pramanick">
+        <h3>Deepan Pramanick</h3>
+      </div>
+
+      <div class="card">
+        <img src="static/images/asmit.jpeg" alt="Asmit Kundu">
+        <h3>Asmit Kundu</h3>
+      </div>
+
+      <div class="card">
+        <img src="static/images/khushi.jpeg" alt="Khushi Soni">
+        <h3>Khushi Soni</h3>
+      </div>
+    </div>
+
+    <button class="back-btn" onclick="window.location.href='/'">🔙 Back to Home</button>
+  </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About Us | SalesXboard</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+    * {
+      margin: 0; padding: 0;
+      box-sizing: border-box;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+      color: white;
+      background: transparent;
+      overflow: hidden;
+    }
+
+    video.bg-video {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      backdrop-filter: blur(8px);
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      font-size: 2.2rem;
+      text-shadow: 0 0 10px #0ff;
+    }
+
+    .card-row {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .card {
+      width: 230px;
+      height: 270px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px solid #0ff;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 20px #0ff88f;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeUp 1.5s ease forwards;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 35px #00f7ff;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      border-radius: 10px;
+      object-fit: cover;
+      margin-bottom: 12px;
+      border: 2px solid #0ff;
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      margin: 0;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .back-btn {
+      margin-top: 40px;
+      background: #00f7ff;
+      color: black;
+      padding: 12px 25px;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 0 15px #00f7ff;
+    }
+
+    .back-btn:hover {
+      background: #0ff;
+      box-shadow: 0 0 25px #00f7ff;
+    }
+  </style>
+</head>
+<body>
+
+  <video class="bg-video" autoplay loop muted>
+    <source src="static/videos/about_background.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="container">
+    <h1>Meet the Creators of SalesXboard</h1>
+
+    <div class="card-row">
+      <div class="card">
+        <img src="static/images/deepan.jpeg" alt="Deepan Pramanick">
+        <h3>Deepan Pramanick</h3>
+      </div>
+
+      <div class="card">
+        <img src="static/images/asmit.jpeg" alt="Asmit Kundu">
+        <h3>Asmit Kundu</h3>
+      </div>
+
+      <div class="card">
+        <img src="static/images/khushi.jpeg" alt="Khushi Soni">
+        <h3>Khushi Soni</h3>
+      </div>
+    </div>
+
+    <button class="back-btn" onclick="window.location.href='/'">🔙 Back to Home</button>
+  </div>
+
+</body>
+</html>

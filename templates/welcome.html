@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome | SalesXboard</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body, html {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    video.bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(15px);
+      border-radius: 20px;
+      padding: 60px 40px;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      max-width: 450px;
+    }
+
+    .logo-img {
+      width: 200px;
+      margin-bottom: 30px;
+      filter: drop-shadow(0 0 10px #00f7ff);
+    }
+
+    .activate-btn {
+      background: linear-gradient(145deg, #00f7ff, #0066ff);
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: white;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+    }
+
+    .activate-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .about {
+      margin-top: 20px;
+    }
+
+    .about a {
+      color: white;
+      font-size: 0.95em;
+      text-decoration: underline;
+      transition: all 0.3s ease;
+    }
+
+    .about a:hover {
+      color: #00f7ff;
+      text-shadow: 0 0 8px #00f7ff;
+    }
+  </style>
+</head>
+<body>
+  <video class="bg-video" autoplay loop muted>
+    <source src="static/videos/welcome_background.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="container">
+    <!-- Big Logo Image -->
+    <img src="static/images/logo.png" alt="SalesXboard Logo" class="logo-img" />
+
+    <button class="activate-btn" onclick="window.location.href='/loading'">Activate SalesXboard</button>
+
+    <div class="about">
+      <a href="/about">About Us</a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | SalesXboard</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: transparent;
+      overflow: hidden;
+      color: white;
+    }
+
+    video.bg-video {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .logo-top {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .logo-top img {
+      width: 130px;
+      height: auto;
+      filter: drop-shadow(0 0 8px #00f7ff);
+    }
+
+    .dashboard-container {
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      padding: 40px;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      text-align: center;
+    }
+
+    .dashboard-container h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+      text-shadow: 0 0 10px #00f7ff;
+    }
+
+    .dashboard-container p {
+      font-size: 1em;
+      margin-bottom: 20px;
+      opacity: 0.9;
+    }
+
+    .form-field {
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    .form-field label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-field input, .form-field input[type="file"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1em;
+    }
+
+    .generate-btn {
+      margin-top: 20px;
+      padding: 12px 30px;
+      font-size: 1.1em;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      background: linear-gradient(145deg, #00f7ff, #0066ff);
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      transition: 0.3s;
+    }
+
+    .generate-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .date-display {
+      margin-bottom: 20px;
+      font-size: 0.9em;
+      opacity: 0.8;
+    }
+  </style>
+
+  <script>
+    window.onload = function() {
+      const now = new Date();
+      document.getElementById('current-date').textContent = now.toDateString();
+    };
+  </script>
+</head>
+<body>
+  <video class="bg-video" autoplay loop muted>
+    <source src="static/videos/dashboard_background.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Logo at the top -->
+  <div class="logo-top">
+    <img src="static/images/logo.png" alt="SalesXboard Logo">
+  </div>
+
+  <div class="dashboard-container">
+    <div class="date-display" id="current-date"></div>
+    <h1>Welcome to SalesXboard</h1>
+    <p>This dashboard analyzes your uploaded sales CSV and reveals deep insights about your business performance.</p>
+    
+    <form action="/processing" method="POST" enctype="multipart/form-data">
+
+      <div class="form-field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-field">
+        <label for="company">Company Name</label>
+        <input type="text" id="company" name="company" required>
+      </div>
+      <div class="form-field">
+        <label for="csv">Upload CSV File</label>
+        <input type="file" id="csv" name="csv_file" accept=".csv" required>
+      </div>
+      <button type="submit" class="generate-btn">Generate Analysis</button>
+    </form>
+  </div>
+</body>
+</html>

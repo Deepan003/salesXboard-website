@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading | SalesXboard</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body, html {
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Orbitron', sans-serif;
+      color: #fff;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+    video.bg-video {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .loading-container {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      background: rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(15px);
+      padding: 30px 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+    }
+
+    .loading-text {
+      font-size: 2.6em;
+      margin-bottom: 30px;
+      text-shadow:
+        0 0 10px #00f7ff,
+        0 0 20px #00f7ff,
+        0 0 40px #00f7ff,
+        0 0 60px #0066ff;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow:
+          0 0 10px #00f7ff,
+          0 0 20px #00f7ff,
+          0 0 40px #00f7ff,
+          0 0 60px #0066ff;
+      }
+      to {
+        text-shadow:
+          0 0 20px #00f7ff,
+          0 0 30px #00f7ff,
+          0 0 50px #00f7ff,
+          0 0 70px #0066ff;
+      }
+    }
+
+    .loading-bar {
+      width: 300px;
+      height: 15px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 0 auto;
+      box-shadow: 0 0 10px #00f7ff;
+    }
+
+    .loading-bar-fill {
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, #00f7ff, #0066ff);
+      animation: loading 3s linear forwards;
+    }
+
+    @keyframes loading {
+      to { width: 100%; }
+    }
+  </style>
+  <script>
+    setTimeout(() => {
+      window.location.href = '/dashboard';
+    }, 2000);
+  </script>
+</head>
+<body>
+
+  <video class="bg-video" autoplay loop muted>
+    <source src="static/videos/loading_background.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="loading-container">
+    <div class="loading-text">Activating SalesXboard...</div>
+    <div class="loading-bar">
+      <div class="loading-bar-fill"></div>
+    </div>
+  </div>
+
+</body>
+</html>
